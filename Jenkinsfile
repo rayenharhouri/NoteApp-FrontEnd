@@ -18,6 +18,12 @@ pipeline {
             }
         }
 
+        stage('Install Angular CLI') {
+            steps {
+                sh 'npm install -g @angular/cli'
+            }
+        }
+
         stage('run FrontEnd') {
             steps {
                 sh 'npm run start'

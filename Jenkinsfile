@@ -20,13 +20,14 @@ pipeline {
 
         stage('Install Angular CLI') {
             steps {
+
                 sh 'npm install -g @angular/cli'
             }
         }
 
         stage('run FrontEnd') {
             steps {
-                sh 'npm run start'
+                sh 'npm run start &'
                 echo 'FrontEnd is running on http://192.168.33.10:6969/'
             }
         }

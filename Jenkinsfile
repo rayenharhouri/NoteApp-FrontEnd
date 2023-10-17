@@ -21,7 +21,7 @@ pipeline {
         stage('run FrontEnd') {
             steps {
                 sh 'npm run start'
-                echo 'FrontEnd is running on http://localhost:8081/'
+                echo 'FrontEnd is running on http://192.168.33.10:6969/'
             }
         }
     }
